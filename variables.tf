@@ -1,4 +1,3 @@
-
 variable "public_key_path" {
   description = "Enter path to the public key"
   default     = "keys/mykey.pub"
@@ -57,23 +56,23 @@ variable "util_cidr" {
   default = "10.3.1.0/24"
 }
 
-variable "env" { 
+variable "env" {
   default = "dev"
 }
 
-variable "domain_name" { 
+variable "domain_name" {
   default = "aws-dev.example.io"
 }
 
-variable "vpc_cidr_block" { 
+variable "vpc_cidr_block" {
   default = "10.0.0.0/21"
 }
 
-variable "subnet1" { 
+variable "subnet1" {
   default = "10.0.1.0/24"
 }
 
-variable "subnet2" { 
+variable "subnet2" {
   default = "10.0.2.0/24"
 }
 

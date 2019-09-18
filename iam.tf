@@ -1,8 +1,8 @@
 #IAM
 
 resource "aws_iam_instance_profile" "myapp" {
-  name  = "${var.app_prefix}-${var.env}-${var.aws_region}-profile"
-  role = "${aws_iam_role.myapp.name}"
+  name = "${var.app_prefix}-${var.env}-${var.aws_region}-profile"
+  role = aws_iam_role.myapp.name
 }
 
 resource "aws_iam_role" "myapp" {
@@ -22,11 +22,12 @@ resource "aws_iam_role" "myapp" {
   ]
 }
 EOF
+
 }
 
 resource "aws_iam_role_policy" "myapp" {
   name   = "${var.app_prefix}-${var.env}-${var.aws_region}-policy"
-  role   = "${aws_iam_role.myapp.id}"
+  role   = aws_iam_role.myapp.id
   policy = <<EOF
 {
   "Version": "2012-10-17",
@@ -62,4 +63,6 @@ resource "aws_iam_role_policy" "myapp" {
   ]
 }
 EOF
+
 }
+
